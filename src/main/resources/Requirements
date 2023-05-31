@@ -1,0 +1,34 @@
+
+    2. Verify the title
+    3. Enter credentials: Tester | test
+    4. Verify the login button is enabled
+    5. Once you login, verify the title as well as
+    Welcome, Tester! Message on top right
+      Also verify logout link is displayed on top right
+    6. Verify the 'Web Orders' logo is displayed on top left
+    7. Click on Order link on top left menu
+    8. Verify 'Product Information' header is displayed
+        Select a random product from the Product dropdown
+        Enter a random quantity between 1 and 10
+        Verify the 'Calculate' button is enabled and click it
+    9. Verify 'Address Information' header is displayed
+    10. Enter random customer name, street, city, state and zip.
+    11. Verify Payment Information header is displayed
+    12. Randomly click between Visa, MasterCard and American Express
+    13. Enter Card Number which should be 16 digits (Create a utility method that generates a random 16 digits)
+    14. Also enter random date which should be in this format:
+       Mm/yy
+    15. Verify 'Process' and 'Reset'button are enabled
+    16. Click on Process button
+    17. Verify New order has been successfully added. Text message is displayed under the process button
+    18. Click on View all orders link on the left menu
+    19. Verify the new order has been added to the orders table.
+    20. Click on Logout button
+    21. Quit the browser.
+
+
+    Notes: Its is highly advisable to create a Utility class for common operations. Like
+    generating random 16 digits, random first name, random lastname and so on and call these
+    methods statically.
+
+ */
