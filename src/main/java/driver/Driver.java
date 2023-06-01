@@ -9,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
+import java.util.Properties;
 
 public class Driver {
     private static WebDriver driver;
@@ -16,6 +17,7 @@ public class Driver {
     private Driver() {}
 
     public static WebDriver getDriver() {
+
 
         String browser = ConfigReader.getProperty("browser");
         switch (browser) {

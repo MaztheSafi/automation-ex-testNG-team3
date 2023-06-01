@@ -1,16 +1,12 @@
 package utilities;
 
-import com.academy.techcenture.pojos.Customer;
-import com.github.javafaker.Faker;
 
-import java.util.Locale;
 
 public class CommonUtils {
     private CommonUtils(){
 
     }
 
-    private static Faker faker = new Faker(Locale.US);
 
     /**
      * Generates a random number between min and max both inclusive
@@ -21,18 +17,6 @@ public class CommonUtils {
     public static int getRandomNumber(int min, int max){
 
         return (int)(Math.random() * max) + min;
-    }
-
-
-    public static Customer getRandomCustomer(){
-        Customer customer = new Customer();
-        customer.setFullName(faker.name().fullName());
-        customer.setStreetAddress(faker.address().streetAddress());
-        customer.setCity(faker.address().city());
-        String state = faker.address().stateAbbr();
-        customer.setState(state);
-        customer.setZip(faker.address().zipCodeByState(state));
-        return customer;
     }
 
     public static String generateRandomCreditCardNumber(){
