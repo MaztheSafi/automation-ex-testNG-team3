@@ -31,25 +31,73 @@ public class RegisterPage {
         @FindBy(xpath= "//h2[text()='New User Signup!']")
         protected WebElement newUserSignup;
 
-        @FindBy ()
+        @FindBy(xpath = "// input [@data-qa='signup-name']")
+        protected WebElement userNameInput;
+
+        @FindBy(xpath = "// input [@data-qa='signup-email']")
+        protected WebElement userEmailInput;
+        @FindBy(xpath = "// button[@data-qa='signup-button']")
+        protected WebElement signupButton;
+
+        @FindBy(xpath = "//b[text()='Enter Account Information']")
+        protected WebElement verifyAcctInfo;
+
+        @FindBy(xpath = "//label[text()='Title']")
+        protected WebElement userPageTitle;
+        @FindBy(id = "//input[@id='name']")
+        protected WebElement getUserNameInput;
+        @FindBy(id = "//input[@id='email']")
+        protected WebElement getUserEmailInput;
+        @FindBy(id = "//input[@id='password']")
+        protected WebElement userPasswordInput;
+
+        @FindBy(id = "//select[@id='days']")
+        protected WebElement userDobDay;
+        @FindBy(id = "//select[@id='months']")
+        protected WebElement userDobMonth;
+        @FindBy(id = "//select[@id='years']")
+        protected WebElement userDobYear;
+
+        @FindBy(className = "//div[@class='checkbox']")
+        protected WebElement newsLetterCheckbox;
 
 
 
-        public void navigateToUrl(){
+
+    public void navigateToUrl(){
             driver.get(ConfigReader.getProperty("url"));
         }
 
         public void verifyRegisterPage(){
             registerButton.click();
-            softAssert.assertTrue(newUserSignup);
+            softAssert.assertTrue(userNameInput.isDisplayed());
+            signupButton.click();
 
-
-            softAssert.assertTrue(loginButton.isEnabled());
-            loginButton.click();
         }
 
 
+        public void personalInformation(){
 
+            userNameInput.sendKeys("username");
+            userEmailInput.sendKeys(("email"));
+            softAssert.assertTrue(userPageTitle.isDisplayed());
+            getUserNameInput.sendKeys("name");
+            getUserEmailInput.sendKeys("email");
+            userPasswordInput.sendKeys("password");
+
+            userDobDay.click();
+
+            userDobMonth.click();
+
+            userDobYear.click();
+
+            newsLetterCheckbox.click();
+        }
+
+
+        public void verifyPageHeader(){
+            softAssert.assertTrue(verifyAcctInfo.isDisplayed());
+        }
 
 
 
