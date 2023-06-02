@@ -1,0 +1,10 @@
+pages\BasePage.class
+pojos\Customer.class
+pages\LoginPage.class
+utilities\CommonUtils.class
+utilities\ConfigReader.class
+driver\Driver.class
+pages\VerifyTestCasesPage.class
+utilities\ExcelReader.class
+pages\RegisterPage.class
+pages\ContactUsPage.class
