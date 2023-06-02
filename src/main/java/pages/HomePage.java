@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import utilities.ConfigReader;
 
 public class HomePage extends BasePage{
 
@@ -63,7 +64,7 @@ public class HomePage extends BasePage{
         singInSignUpButton.click();
     }
     public void verifyLogInAsUser(){
-        Assert.assertTrue("Log in as user not visible",loginAsUserText.getText().trim().equalsIgnoreCase("Logged in as "+ ConfigReader.getProperty("name")));
+        Assert.assertTrue(loginAsUserText.getText().trim().equalsIgnoreCase("Logged in as "+ ConfigReader.getProperty("name")), "Log in as user not visible");
     }
     public void verifyUserIsOnAHomePage(){
         Assert.assertTrue(driver.getTitle().trim().equalsIgnoreCase("Automation Exercise"));
