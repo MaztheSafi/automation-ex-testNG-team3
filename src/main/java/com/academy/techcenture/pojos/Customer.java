@@ -1,4 +1,4 @@
-package pojos;
+package com.academy.techcenture.pojos;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

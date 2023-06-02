@@ -1,4 +1,4 @@
-package utilities;
+package com.academy.techcenture.utilities;
 
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -38,7 +38,7 @@ public class ConfigReader {
         ConfigReader.setProperty("customerName","Kevin Lee");
 
 
-        //in differetn context
+        //in different context
 
         System.out.println(ConfigReader.getProperty("customerName"));
 

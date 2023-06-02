@@ -1,6 +1,7 @@
-package driver;
+package com.academy.techcenture.driver;
 
-import com.academy.techcenture.utils.ConfigReader;
+
+import com.academy.techcenture.utilities.ConfigReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,7 +10,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
-import java.util.Properties;
 
 public class Driver {
     private static WebDriver driver;
