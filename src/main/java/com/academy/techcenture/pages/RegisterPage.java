@@ -113,7 +113,7 @@ public class RegisterPage extends BasePage {
 
 //-----------------Methods-----------------------------------------------------
 
-//---Case1----
+    //---Case1----
     public void newUserRegistration() {
         loginSignUpIcon.click();
         newUserSignup.isDisplayed();
@@ -153,7 +153,7 @@ public class RegisterPage extends BasePage {
     }
 
 
-//---TestCase5---
+    //---TestCase5---
     public void RegisteredUserWithExistingEmail() {
         loginSignUpIcon.click();
         newUserSignup.isDisplayed();
@@ -166,7 +166,6 @@ public class RegisterPage extends BasePage {
 
     }
 }
-
 
 
 
